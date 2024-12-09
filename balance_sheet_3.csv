@@ -1,0 +1,33 @@
+```csv
+Category,Subcategory,Item,September 28, 2024,September 30, 2023
+Assets,Current Assets,Cash and cash equivalents,29943,29965
+Assets,Current Assets,Marketable securities,35228,31590
+Assets,Current Assets,Accounts receivable, net,33410,29508
+Assets,Current Assets,Vendor non-trade receivables,32833,31477
+Assets,Current Assets,Inventories,7286,6331
+Assets,Current Assets,Other current assets,14287,14695
+Assets,Current Assets,Total current assets,152987,143566
+Assets,Non-current Assets,Marketable securities,91479,100544
+Assets,Non-current Assets,Property, plant and equipment, net,45680,43715
+Assets,Non-current Assets,Other non-current assets,74834,64758
+Assets,Non-current Assets,Total non-current assets,211993,209017
+Assets,,Total Assets,364980,352583
+Liabilities and Shareholders’ Equity,Current Liabilities,Accounts payable,68960,62611
+Liabilities and Shareholders’ Equity,Current Liabilities,Other current liabilities,78304,58829
+Liabilities and Shareholders’ Equity,Current Liabilities,Deferred revenue,8249,8061
+Liabilities and Shareholders’ Equity,Current Liabilities,Commercial paper,9967,5985
+Liabilities and Shareholders’ Equity,Current Liabilities,Term debt,10912,9822
+Liabilities and Shareholders’ Equity,Current Liabilities,Total current liabilities,176392,145308
+Liabilities and Shareholders’ Equity,Non-current Liabilities,Term debt,85750,95281
+Liabilities and Shareholders’ Equity,Non-current Liabilities,Other non-current liabilities,45888,49848
+Liabilities and Shareholders’ Equity,Non-current Liabilities,Total non-current liabilities,131638,145129
+Liabilities and Shareholders’ Equity,,Total Liabilities,308030,290437
+Liabilities and Shareholders’ Equity,,Commitments and Contingencies,,
+Liabilities and Shareholders’ Equity,Shareholders’ Equity,Common stock and additional paid-in capital, $0.00001 par value,Shares authorized,"50,400,000"
+Liabilities and Shareholders’ Equity,Shareholders’ Equity,Common stock and additional paid-in capital, $0.00001 par value,Shares issued and outstanding,15116786,15550061
+Liabilities and Shareholders’ Equity,Shareholders’ Equity,Common stock and additional paid-in capital, $0.00001 par value,Balance,83276,73812
+Liabilities and Shareholders’ Equity,Shareholders’ Equity,Accumulated deficit,19154,214
+Liabilities and Shareholders’ Equity,Shareholders’ Equity,Accumulated other comprehensive loss,7172,11452
+Liabilities and Shareholders’ Equity,Shareholders’ Equity,Total Shareholders’ Equity,56950,62146
+Liabilities and Shareholders’ Equity,,Total Liabilities and Shareholders’ Equity,364980,352583
+```
