@@ -1,0 +1,100 @@
+Balance Sheet
+Item	Category	Subcategory	2024-09-28	2023-09-30
+Assets	CurrentAssets	Cash and cash equivalents	29943	29965
+Assets	CurrentAssets	Marketable securities	35228	31590
+Assets	CurrentAssets	Accounts receivable, net	33410	29508
+Assets	CurrentAssets	Vendor non-trade receivables	32833	31477
+Assets	CurrentAssets	Inventories	7286	6331
+Assets	CurrentAssets	Other current assets	14287	14695
+Assets	CurrentAssets	Total current assets	152987	143566
+Assets	NonCurrentAssets	Marketable securities	91479	100544
+Assets	NonCurrentAssets	Property, plant and equipment, net	45680	43715
+Assets	NonCurrentAssets	Other non-current assets	74834	64758
+Assets	NonCurrentAssets	Total non-current assets	211993	209017
+Assets	Total assets		364980	352583
+LiabilitiesAndShareholdersEquity	CurrentLiabilities	Accounts payable	68960	62611
+LiabilitiesAndShareholdersEquity	CurrentLiabilities	Other current liabilities	78304	58829
+LiabilitiesAndShareholdersEquity	CurrentLiabilities	Deferred revenue	8249	8061
+LiabilitiesAndShareholdersEquity	CurrentLiabilities	Commercial paper	9967	5985
+LiabilitiesAndShareholdersEquity	CurrentLiabilities	Term debt	10912	9822
+LiabilitiesAndShareholdersEquity	CurrentLiabilities	Total current liabilities	176392	145308
+LiabilitiesAndShareholdersEquity	NonCurrentLiabilities	Term debt	85750	95281
+LiabilitiesAndShareholdersEquity	NonCurrentLiabilities	Other non-current liabilities	45888	49848
+LiabilitiesAndShareholdersEquity	NonCurrentLiabilities	Total non-current liabilities	131638	145129
+LiabilitiesAndShareholdersEquity	ShareholdersEquity	Common stock and additional paid-in capital	83276	73812
+LiabilitiesAndShareholdersEquity	ShareholdersEquity	Accumulated deficit	-19154	-214
+LiabilitiesAndShareholdersEquity	ShareholdersEquity	Accumulated other comprehensive loss	-7172	-11452
+LiabilitiesAndShareholdersEquity	ShareholdersEquity	Total shareholders’ equity	56950	62146
+LiabilitiesAndShareholdersEquity	Total liabilities and shareholders’ equity		364980	352583
+
+Statement of Operations
+Item	Category	Subcategory	2024-09-28	2023-09-30	2022-09-24
+NetSales	Products		294866	298085	316199
+NetSales	Services		96169	85200	78129
+NetSales	Total net sales		391035	383285	394328
+CostOfSales	Products		185233	189282	201471
+CostOfSales	Services		25119	24855	22075
+CostOfSales	Total cost of sales		210352	214137	223546
+GrossMargin			180683	169148	170782
+OperatingExpenses	Research and development		31370	29915	26251
+OperatingExpenses	Selling, general and administrative		26097	24932	25094
+OperatingExpenses	Total operating expenses		57467	54847	51345
+OperatingIncome			123216	114301	119437
+OtherIncomeExpenseNet			269	-565	-334
+IncomeBeforeProvisionForIncomeTaxes			123485	113736	119103
+ProvisionForIncomeTaxes			29749	16741	19300
+NetIncome			93736	96995	99803
+EarningsPerShare	Basic		6.11	6.16	6.15
+EarningsPerShare	Diluted		6.08	6.13	6.11
+SharesUsedInComputingEarningsPerShare	Basic		15343783	15744231	16215963
+SharesUsedInComputingEarningsPerShare	Diluted		15408095	15812547	16325819
+
+Cash Flow
+Item	Category	Subcategory	2024-09-28	2023-09-30	2022-09-24
+OperatingActivities	NetIncome		93736	96995	99803
+OperatingActivities	DepreciationAndAmortization		11445	11519	11104
+OperatingActivities	ShareBasedCompensationExpense		11688	10833	9038
+OperatingActivities	Other		-2266	-2227	1006
+OperatingActivities	ChangesInOperatingAssetsAndLiabilities	AccountsReceivableNet	-3788	-1688	-1823
+OperatingActivities	ChangesInOperatingAssetsAndLiabilities	VendorNonTradeReceivables	-1356	1271	-7520
+OperatingActivities	ChangesInOperatingAssetsAndLiabilities	Inventories	-1046	-1618	1484
+OperatingActivities	ChangesInOperatingAssetsAndLiabilities	OtherCurrentAndNonCurrentAssets	-11731	-5684	-6499
+OperatingActivities	ChangesInOperatingAssetsAndLiabilities	AccountsPayable	6020	-1889	9448
+OperatingActivities	ChangesInOperatingAssetsAndLiabilities	OtherCurrentAndNonCurrentLiabilities	15552	3031	6110
+OperatingActivities	CashGeneratedByOperatingActivities		118254	110543	122151
+InvestingActivities	PurchasesOfMarketableSecurities		-48656	-29513	-76923
+InvestingActivities	ProceedsFromMaturitiesOfMarketableSecurities		51211	39686	29917
+InvestingActivities	ProceedsFromSalesOfMarketableSecurities		11135	5828	37446
+InvestingActivities	PaymentsForAcquisitionOfPropertyPlantAndEquipment		-9447	-10959	-10708
+InvestingActivities	Other		-1308	-1337	-2086
+InvestingActivities	CashGeneratedByUsedInInvestingActivities		2935	3705	-22354
+FinancingActivities	PaymentsForTaxesRelatedToNetShareSettlementOfEquityAwards		-5441	-5431	-6223
+FinancingActivities	PaymentsForDividendsAndDividendEquivalents		-15234	-15025	-14841
+FinancingActivities	RepurchasesOfCommonStock		-94949	-77550	-89402
+FinancingActivities	ProceedsFromIssuanceOfTermDebtNet		0	5228	5465
+FinancingActivities	RepaymentsOfTermDebt		-9958	-11151	-9543
+FinancingActivities	ProceedsFromRepaymentsOfCommercialPaperNet		3960	-3978	3955
+FinancingActivities	Other		-361	-581	-160
+FinancingActivities	CashUsedInFinancingActivities		-121983	-108488	-110749
+IncreaseDecreaseInCashCashEquivalentsAndRestrictedCashAndCashEquivalents			-794	5760	-10952
+CashCashEquivalentsAndRestrictedCashAndCashEquivalentsEndingBalances			29943	30737	24977
+
+Shareholders' Equity
+Item	Category	Subcategory	2024-09-28	2023-09-30	2022-09-24
+TotalShareholdersEquityBeginningBalances			62146	50672	63090
+CommonStockAndAdditionalPaidInCapital	BeginningBalances		73812	64849	57365
+CommonStockAndAdditionalPaidInCapital	CommonStockIssued		1423	1346	1175
+CommonStockAndAdditionalPaidInCapital	CommonStockWithheldRelatedToNetShareSettlementOfEquityAwards		-3993	-3521	-2971
+CommonStockAndAdditionalPaidInCapital	ShareBasedCompensation		12034	11138	9280
+CommonStockAndAdditionalPaidInCapital	EndingBalances		83276	73812	64849
+RetainedEarningsAccumulatedDeficit	BeginningBalances		-214	-3068	5562
+RetainedEarningsAccumulatedDeficit	NetIncome		93736	96995	99803
+RetainedEarningsAccumulatedDeficit	DividendsAndDividendEquivalentsDeclared		-15218	-14996	-14793
+RetainedEarningsAccumulatedDeficit	CommonStockWithheldRelatedToNetShareSettlementOfEquityAwards		-1612	-2099	-3454
+RetainedEarningsAccumulatedDeficit	CommonStockRepurchased		-95846	-77046	-90186
+RetainedEarningsAccumulatedDeficit	EndingBalances		-19154	-214	-3068
+AccumulatedOtherComprehensiveIncomeLoss	BeginningBalances		-11452	-11109	163
+AccumulatedOtherComprehensiveIncomeLoss	OtherComprehensiveIncomeLoss		4280	-343	-11272
+AccumulatedOtherComprehensiveIncomeLoss	EndingBalances		-7172	-11452	-11109
+TotalShareholdersEquityEndingBalances			56950	62146	50672
+DividendsAndDividendEquivalentsDeclaredPerShareOrRSU			0.98	0.94	0.90
