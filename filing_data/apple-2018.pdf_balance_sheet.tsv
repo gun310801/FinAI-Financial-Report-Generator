@@ -1,58 +1,116 @@
+```
 Balance Sheet
 Item	Category	Subcategory	September 29, 2018	September 30, 2017
-Assets	Current Assets	Cash and cash equivalents	25913	20289
-Assets	Current Assets	Marketable securities	40388	53892
-Assets	Current Assets	Accounts receivable, net	23186	17874
-Assets	Current Assets	Inventories	3956	4855
-Assets	Current Assets	Vendor non-trade receivables	25809	17799
-Assets	Current Assets	Other current assets	12087	13936
-Assets	Non-current Assets	Marketable securities	170799	194714
-Assets	Non-current Assets	Property, plant and equipment, net	41304	33783
-Assets	Non-current Assets	Other non-current assets	22283	18177
-Liabilities and Shareholders’ Equity	Current Liabilities	Accounts payable	55888	44242
-Liabilities and Shareholders’ Equity	Current Liabilities	Other current liabilities	32687	30551
-Liabilities and Shareholders’ Equity	Current Liabilities	Deferred revenue	7543	7548
-Liabilities and Shareholders’ Equity	Current Liabilities	Commercial paper	11964	11977
-Liabilities and Shareholders’ Equity	Current Liabilities	Term debt	8784	6496
-Liabilities and Shareholders’ Equity	Non-current Liabilities	Deferred revenue	2797	2836
-Liabilities and Shareholders’ Equity	Non-current Liabilities	Term debt	93735	97207
-Liabilities and Shareholders’ Equity	Non-current Liabilities	Other non-current liabilities	45180	40415
-Liabilities and Shareholders’ Equity	Shareholders’ Equity	Common stock and additional paid-in capital	40201	35867
-Liabilities and Shareholders’ Equity	Shareholders’ Equity	Retained earnings	70400	98330
-Liabilities and Shareholders’ Equity	Shareholders’ Equity	Accumulated other comprehensive income/(loss)	-3454	-150
+Cash and cash equivalents	Assets	Current assets	25,913	20,289
+Marketable securities	Assets	Current assets	40,388	53,892
+Accounts receivable, net	Assets	Current assets	23,186	17,874
+Inventories	Assets	Current assets	3,956	4,855
+Vendor non-trade receivables	Assets	Current assets	25,809	17,799
+Other current assets	Assets	Current assets	12,087	13,936
+Total current assets	Assets	Current assets	131,339	128,645
+Marketable securities	Assets	Non-current assets	170,799	194,714
+Property, plant and equipment, net	Assets	Non-current assets	41,304	33,783
+Other non-current assets	Assets	Non-current assets	22,283	18,177
+Total non-current assets	Assets	Non-current assets	234,386	246,674
+Total assets	Assets	Total assets	365,725	375,319
+Accounts payable	Liabilities	Current liabilities	55,888	44,242
+Other current liabilities	Liabilities	Current liabilities	32,687	30,551
+Deferred revenue	Liabilities	Current liabilities	7,543	7,548
+Commercial paper	Liabilities	Current liabilities	11,964	11,977
+Term debt	Liabilities	Current liabilities	8,784	6,496
+Total current liabilities	Liabilities	Current liabilities	116,866	100,814
+Deferred revenue	Liabilities	Non-current liabilities	2,797	2,836
+Term debt	Liabilities	Non-current liabilities	93,735	97,207
+Other non-current liabilities	Liabilities	Non-current liabilities	45,180	40,415
+Total non-current liabilities	Liabilities	Non-current liabilities	141,712	140,458
+Total liabilities	Liabilities	Total liabilities	258,578	241,272
+Common stock and additional paid-in capital	Shareholders’ Equity	Shareholders’ equity	40,201	35,867
+Retained earnings	Shareholders’ Equity	Shareholders’ equity	70,400	98,330
+Accumulated other comprehensive income/(loss)	Shareholders’ Equity	Shareholders’ equity	-3,454	-150
+Total shareholders’ equity	Shareholders’ Equity	Shareholders’ equity	107,147	134,047
+Total liabilities and shareholders’ equity	Total	Total	365,725	375,319
 
 Statement of Operations
 Item	Category	Subcategory	September 29, 2018	September 30, 2017	September 24, 2016
-Net sales	null	null	265595	229234	215639
-Cost of sales	null	null	163756	141048	131376
-Gross margin	null	null	101839	88186	84263
-Operating expenses	null	Research and development	14236	11581	10045
-Operating expenses	null	Selling, general and administrative	16705	15261	14194
-Total operating expenses	null	null	30941	26842	24239
-Operating income	null	null	70898	61344	60024
-Other income/(expense), net	null	null	2005	2745	1348
-Income before provision for income taxes	null	null	72903	64089	61372
-Provision for income taxes	null	null	13372	15738	15685
-Net income	null	null	59531	48351	45687
+Net sales	Revenue	Total	265,595	229,234	215,639
+Cost of sales	Expenses	Total	163,756	141,048	131,376
+Gross margin	Gross Margin	Total	101,839	88,186	84,263
+Research and development	Expenses	Total	14,236	11,581	10,045
+Selling, general and administrative	Expenses	Total	16,705	15,261	14,194
+Total operating expenses	Expenses	Total	30,941	26,842	24,239
+Operating income	Operating Income	Total	70,898	61,344	60,024
+Other income/(expense), net	Other Income/Expense	Total	2,005	2,745	1,348
+Income before provision for income taxes	Pre-Tax Income	Total	72,903	64,089	61,372
+Provision for income taxes	Taxes	Total	13,372	15,738	15,685
+Net income	Net Income	Total	59,531	48,351	45,687
+Basic earnings per share	Earnings Per Share	Total	12.01	9.27	8.35
+Diluted earnings per share	Earnings Per Share	Total	11.91	9.21	8.31
+Shares used in computing earnings per share - Basic	Shares	Total	4,955,377	5,217,242	5,470,820
+Shares used in computing earnings per share - Diluted	Shares	Total	5,000,109	5,251,692	5,500,281
 
-Cash Flow
+Cash Flow Statement
 Item	Category	Subcategory	September 29, 2018	September 30, 2017	September 24, 2016
-Cash and cash equivalents, beginning of the year	Operating Activities	null	20289	20484	21120
-Net income	Operating Activities	null	59531	48351	45687
-Depreciation and amortization	Operating Activities	null	10903	10157	10505
-Share-based compensation expense	Operating Activities	null	5340	4840	4210
-Deferred income tax expense/(benefit)	Operating Activities	null	-32590	5966	4938
-Other	Operating Activities	null	-444	-166	486
-Cash generated by operating activities	Operating Activities	null	77434	64225	66231
-Cash generated by/(used in) investing activities	Investing Activities	null	16066	-46446	-45977
-Cash used in financing activities	Financing Activities	null	-87876	-17974	-20890
-Increase/(Decrease) in cash and cash equivalents	null	null	5624	-195	-636
-Cash and cash equivalents, end of the year	null	null	25913	20289	20484
+Cash and cash equivalents, beginning of the year	Operating Activities	Beginning Balance	20,289	20,484	21,120
+Net income	Operating Activities	Net Income	59,531	48,351	45,687
+Depreciation and amortization	Operating Activities	Adjustments	10,903	10,157	10,505
+Share-based compensation expense	Operating Activities	Adjustments	5,340	4,840	4,210
+Deferred income tax expense/(benefit)	Operating Activities	Adjustments	-32,590	5,966	4,938
+Other	Operating Activities	Adjustments	-444	-166	486
+Accounts receivable, net	Operating Activities	Changes in Assets and Liabilities	-5,322	-2,093	527
+Inventories	Operating Activities	Changes in Assets and Liabilities	828	-2,723	217
+Vendor non-trade receivables	Operating Activities	Changes in Assets and Liabilities	-8,010	-4,254	-51
+Other current and non-current assets	Operating Activities	Changes in Assets and Liabilities	-423	-5,318	1,055
+Accounts payable	Operating Activities	Changes in Assets and Liabilities	9,175	8,966	2,117
+Deferred revenue	Operating Activities	Changes in Assets and Liabilities	-44	-626	-1,554
+Other current and non-current liabilities	Operating Activities	Changes in Assets and Liabilities	38,490	1,125	-1,906
+Cash generated by operating activities	Operating Activities	Total Operating Activities	77,434	64,225	66,231
+Purchases of marketable securities	Investing Activities	Investments	-71,356	-159,486	-142,428
+Proceeds from maturities of marketable securities	Investing Activities	Investments	55,881	31,775	21,258
+Proceeds from sales of marketable securities	Investing Activities	Investments	47,838	94,564	90,536
+Payments for acquisition of property, plant and equipment	Investing Activities	Investments	-13,313	-12,451	-12,734
+Payments made in connection with business acquisitions, net	Investing Activities	Investments	-721	-329	-297
+Purchases of non-marketable securities	Investing Activities	Investments	-1,871	-521	-1,388
+Proceeds from non-marketable securities	Investing Activities	Investments	353	126	0
+Other	Investing Activities	Investments	-745	-124	-924
+Cash generated by/(used in) investing activities	Investing Activities	Total Investing Activities	16,066	-46,446	-45,977
+Proceeds from issuance of common stock	Financing Activities	Financing	669	555	495
+Payments for taxes related to net share settlement of equity awards	Financing Activities	Financing	-2,527	-1,874	-1,570
+Payments for dividends and dividend equivalents	Financing Activities	Financing	-13,712	-12,769	-12,150
+Repurchases of common stock	Financing Activities	Financing	-72,738	-32,900	-29,722
+Proceeds from issuance of term debt, net	Financing Activities	Financing	6,969	28,662	24,954
+Repayments of term debt	Financing Activities	Financing	-6,500	-3,500	-2,500
+Change in commercial paper, net	Financing Activities	Financing	-37	3,852	-397
+Cash used in financing activities	Financing Activities	Total Financing Activities	-87,876	-17,974	-20,890
+Increase/(Decrease) in cash and cash equivalents	Net Change in Cash	Net Change	5,624	-195	-636
+Cash and cash equivalents, end of the year	Cash	Ending Balance	25,913	20,289	20,484
+Cash paid for income taxes, net	Supplemental	Taxes	10,417	11,591	10,444
+Cash paid for interest	Supplemental	Interest	3,022	2,092	1,316
 
 Shareholder's Equity
 Item	Category	Subcategory	September 29, 2018	September 30, 2017	September 24, 2016
-Common Stock and Additional Paid-In Capital	null	Shares	4754986	5126201	5336166
-Common Stock and Additional Paid-In Capital	null	Amount	40201	35867	31251
-Retained Earnings	null	null	70400	98330	96364
-Accumulated Other Comprehensive Income/(Loss)	null	null	-3454	-150	634
-Total Shareholders’ Equity	null	null	107147	134047	128249
+Balances as of September 26, 2015	Common Stock and Additional Paid-In Capital	Shares	4,754,986	5,126,201	5,336,166
+Net income	Retained Earnings	Net Income	59,531	48,351	45,687
+Other comprehensive income/(loss)	Accumulated Other Comprehensive Income/(Loss)	Other Comprehensive Income	-3,026	-784	979
+Dividends and dividend equivalents declared	Retained Earnings	Dividends	-13,735	-12,803	-12,188
+Repurchase of common stock	Retained Earnings	Repurchase	-73,056	-33,001	-29,000
+Share-based compensation	Common Stock and Additional Paid-In Capital	Compensation	5,443	4,909	4,262
+Common stock issued, net of shares withheld for employee taxes	Common Stock and Additional Paid-In Capital	Issued Stock	-1,109	-913	-806
+Tax benefit from equity awards	Common Stock and Additional Paid-In Capital	Tax Benefit	0	620	379
+Balances as of September 24, 2016	Balances	Balances	4,754,986	5,126,201	5,336,166
+Net income	Retained Earnings	Net Income	59,531	48,351	45,687
+Other comprehensive income/(loss)	Accumulated Other Comprehensive Income/(Loss)	Other Comprehensive Income	-3,026	-784	979
+Dividends and dividend equivalents declared	Retained Earnings	Dividends	-13,735	-12,803	-12,188
+Repurchase of common stock	Retained Earnings	Repurchase	-73,056	-33,001	-29,000
+Share-based compensation	Common Stock and Additional Paid-In Capital	Compensation	5,443	4,909	4,262
+Common stock issued, net of shares withheld for employee taxes	Common Stock and Additional Paid-In Capital	Issued Stock	-1,109	-913	-806
+Tax benefit from equity awards	Common Stock and Additional Paid-In Capital	Tax Benefit	0	620	379
+Balances as of September 30, 2017	Balances	Balances	4,754,986	5,126,201	5,336,166
+Cumulative effect of change in accounting principle	Retained Earnings	Accounting Change	278	0	0
+Net income	Retained Earnings	Net Income	59,531	48,351	45,687
+Other comprehensive income/(loss)	Accumulated Other Comprehensive Income/(Loss)	Other Comprehensive Income	-3,026	-784	979
+Dividends and dividend equivalents declared	Retained Earnings	Dividends	-13,735	-12,803	-12,188
+Repurchase of common stock	Retained Earnings	Repurchase	-73,056	-33,001	-29,000
+Share-based compensation	Common Stock and Additional Paid-In Capital	Compensation	5,443	4,909	4,262
+Common stock issued, net of shares withheld for employee taxes	Common Stock and Additional Paid-In Capital	Issued Stock	-1,109	-913	-806
+Balances as of September 29, 2018	Balances	Balances	4,754,986	5,126,201	5,336,166
+```
