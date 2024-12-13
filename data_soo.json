@@ -1,7 +1,7 @@
 {
     "APPLE": [
       {
-        "Item": "Net sales",
+        "Item": "net sales",
         "Category": "",
         "Subcategory": "",
         "2024": 391035,
@@ -17,7 +17,7 @@
         "2014": 182795
       },
       {
-        "Item": "Cost of sales",
+        "Item": "cost of sales",
         "Category": "",
         "Subcategory": "",
         "2024": 210352,
