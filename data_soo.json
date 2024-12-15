@@ -81,7 +81,7 @@
         "2014": 11993
       },
       {
-        "Item": "Total operating expenses",
+        "Item": "total operating expenses",
         "Category": "",
         "Subcategory": "",
         "2024": 57467,
@@ -129,7 +129,7 @@
         "2014": 980
       },
       {
-        "Item": "Income before provision for income taxes",
+        "Item": "income before provision for income taxes",
         "Category": "",
         "Subcategory": "",
         "2024": 123485,
@@ -145,7 +145,7 @@
         "2014": 53483
       },
       {
-        "Item": "Provision for income taxes",
+        "Item": "provision for income taxes",
         "Category": "",
         "Subcategory": "",
         "2024": 29749,
