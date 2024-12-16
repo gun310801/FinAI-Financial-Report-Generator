@@ -49,8 +49,8 @@
         "2014": 70537
       },
       {
-        "Item": "Operating expenses",
-        "Category": "Research and development",
+        "Item": "operating expenses",
+        "Category": "research and development",
         "Subcategory": "",
         "2024": 31370,
         "2023": 29915,
@@ -65,8 +65,8 @@
         "2014": 6041
       },
       {
-        "Item": "Operating expenses",
-        "Category": "Selling, general and administrative",
+        "Item": "operating expenses",
+        "Category": "selling, general and administrative",
         "Subcategory": "",
         "2024": 26097,
         "2023": 24932,
@@ -177,8 +177,8 @@
         "2014": 39510
       },
       {
-        "Item": "Earnings per share",
-        "Category": "Basic",
+        "Item": "earnings per share",
+        "Category": "basic",
         "Subcategory": "",
         "2024": 6.11,
         "2023": 6.16,
@@ -193,8 +193,8 @@
         "2014": 6.49
       },
       {
-        "Item": "Earnings per share",
-        "Category": "Diluted",
+        "Item": "earnings per share",
+        "Category": "diluted",
         "Subcategory": "",
         "2024": 6.08,
         "2023": 6.13,
