@@ -7,9 +7,6 @@ from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 from langchain_openai import ChatOpenAI
 from tools import __all__
 import streamlit as st
-import matplotlib as plt
-import io
-import traceback
 
 # Step 1: Environment Configuration
 def load_api_key(env_file='key.env'):
@@ -24,23 +21,6 @@ def initialize_tools():
 
 # Step 3: Main Streamlit App
 def main():
-
-    def show_image(code):
-        code = code.strip('```python')
-        namespace = {"plt": plt, "io": io}
-        try:
-            # Safely execute the code
-            exec(code, namespace)
-            # Capture the graph and display it
-            buffer = io.BytesIO()
-            plt.savefig(buffer, format="png")
-            buffer.seek(0)
-            st.image(buffer, caption="Generated Graph")
-            plt.close()
-        except Exception as e:
-            st.error("An error occurred while executing the graph code.")
-            st.text(traceback.format_exc())
-
     # Load API key and tools
     api_key = load_api_key()
     tools = initialize_tools()
@@ -55,7 +35,7 @@ def main():
             memory_key="chat_history",  # Explicit key for memory storage
             return_messages=True
         )
-        initial_message = "You are an AI assistant that can provide helpful answers using available tools. \nIf you are unable to answer, you can use the following tools:'Extract_Tool', 'Growth_Tool', 'GrossmmarginpercTool','ExpensespercTool','TaxrateTool','EBTTool','EPS_Tool','RNDGrowth_Tool','RNDTool','SNGTool','GenerateGraph_Tool'"
+        initial_message = "You are an AI assistant that can provide helpful answers using available tools. \nIf you are unable to answer, you can use the following tools:'Extract_Tool', 'Growth_Tool', 'GrossmmarginpercTool','ExpensespercTool','TaxrateTool','EBTTool','EPS_Tool','RNDGrowth_Tool','RNDTool','SNGTool','GenerateGraph_Tool','GenerateCSV_Tool'.If you get list, give output as string. if a tool returns a dict like this: <curly bracket> link : <link to a file> <close curly bracked> return the response link [a response link looks like this /tmp/..] so it can displayed on the streamlit frontend. do not have any text other than the link itself in the output."
 
         # Add the system message to memory only once
         st.session_state.memory.chat_memory.add_message(
@@ -70,6 +50,7 @@ def main():
         verbose=True,
         memory=st.session_state.memory,  # Pass memory explicitly
         handle_parsing_errors=True,
+        max_iterations=50
     )
 
     # Streamlit UI
@@ -80,49 +61,44 @@ def main():
         if isinstance(msg, SystemMessage):
             continue  # Skip displaying the system message
         role = "user" if isinstance(msg, HumanMessage) else "assistant"
-        st.chat_message(role).write(msg.content)
+        if msg.content.startswith("sandbox:/tmp/") or  msg.content.startswith("/tmp/") and os.path.exists(msg.content) and msg.content.endswith(".png"):
+            # Display the image
+                st.chat_message("assistant").write("Here's the generated file:")
+                st.image(msg.content)  # This will display the image in the chat
+        else:
+            st.chat_message(role).write(msg.content)
+
+        
 
     # User input
     user_input = st.chat_input("Enter your query...")
     if user_input:
-        # Add user input to memory
-        # st.session_state.memory.chat_memory.add_message(HumanMessage(content=user_input))
         st.chat_message("user").write(user_input)
-        
-        # Get agent response
-        # try:
-        #     response = agent_executor.invoke({
-        #         "input": user_input,
-        #         "chat_history": st.session_state.memory.chat_memory.messages  # Pass memory explicitly
-        #     })
-        #     response_output = response.get("output", "Sorry, I couldn't generate a response.")
-        # except Exception as e:
-        #     response_output = f"Error: {str(e)}"
         try:
             response = agent_executor.invoke({
                 "input": user_input,
                 "chat_history": st.session_state.memory.chat_memory.messages  # Pass memory explicitly
             })
-            
-                # Check for executable code in the response
-            if "code" in response:
-                code = response["code"]
-                show_image(code)
-            elif "error" in response:
-                # Handle error message
-                st.chat_message("assistant").write(response["error"])
+            response_output = response.get("output", "Sorry, I couldn't generate a response.")
+            if response_output.startswith("sandbox:/tmp/") or  response_output.startswith("/tmp/") and os.path.exists(response_output):
+                if response_output.endswith(".png"):
+                    st.chat_message("assistant").write("Here's the generated file:")
+                    st.image(response_output)  # This will display the image in the chat
+                elif response_output.endswith(".csv"):
+                    st.chat_message("assistant").write("Here's the generated CSV file:")
+                    with open(response_output, "r") as file:
+                        st.download_button(
+                            label="Download CSV",
+                            data=file,
+                            file_name=os.path.basename(response_output),
+                            mime="text/csv"
+                        )
             else:
-                # Handle normal text output
-                response_output = response.get("output", "Sorry, I couldn't generate a response.")
                 st.chat_message("assistant").write(response_output)
         except Exception as e:
             response_output = f"Error: {str(e)}"
-            st.chat_message("assistant").write(response_output)  # Display error message
-        # Add assistant response to memory
-        # st.session_state.memory.chat_memory.add_message(AIMessage(content=response_output))
+            st.chat_message("assistant").write(response_output)
 
-        # Display the latest assistant response
-        st.chat_message("assistant").write(response_output)
 
 if __name__ == "__main__":
     main()

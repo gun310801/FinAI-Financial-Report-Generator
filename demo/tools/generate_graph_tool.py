@@ -21,13 +21,14 @@ class GenerateGraphToolArgs(BaseModel):
     title: str = Field(description="Title of the graph.")
 
 @tool(args_schema=GenerateGraphToolArgs)
-def GenerateGraph_Tool(data: list, labels: list, graph_type: str, title: str) -> dict:
+def GenerateGraph_Tool(data: list, labels: list, graph_type: str, title: str) -> str:
     """
     Generates Python code to create a graph (e.g., bar, line, scatter) using matplotlib based on user input.
+    Outputs code that gets executed in the frontend.
     """
     prompt = (
         f"Generate Python code to create a '{graph_type}' using matplotlib. The graph should have the title '{title}', "
-        f"the X-axis labels as {labels}, and the Y-axis values as {data}. Return only the code."
+        f"the X-axis labels as {labels}, and the Y-axis values as {data}. Return only the code. Always replace plt.show() with plt.savefig(buffer, format='png')"
     )
     
     try:
@@ -41,35 +42,36 @@ def GenerateGraph_Tool(data: list, labels: list, graph_type: str, title: str) ->
             temperature=0.2
         )
         code = response.choices[0].message.content
-        return {'code': str(code.strip())}
+        return str({'code': str(code.strip())})
     except Exception as e:
         return f"Error generating graph code: {str(e)}"
 
 ### Step 2: Tool Schema for Executing Graph Code ###
-# class ExecuteGraphToolArgs(BaseModel):
-#     code: str = Field(description="The Python code to execute and display the graph.")
+class ExecuteGraphToolArgs(BaseModel):
+    code: str = Field(description="The Python code to execute and display the graph.")
+    filename: str = Field(description="A relevant name for the vizualization file")
 
-# @tool(args_schema=ExecuteGraphToolArgs)
-# def ExecuteGraph_Tool(code: str) -> dict:
-#     """
-#     Executes the Python code to  display the graph.
-#     """
-#     code = code.strip('```python')
-#     namespace = {"plt": plt, "io": io}
-#     try:
-#         # Safely execute the code
-#         exec(code, namespace)
-#         # Capture the graph and display it
-#         buffer = io.BytesIO()
-#         plt.savefig(buffer, format="png")
-#         buffer.seek(0)
-#         print(f"Buffer type: {type(buffer)}")
-#         plt.close() 
-#         return {"image_buffer": buffer}
-#         # st.image(buffer, caption="Generated Graph")
-#         # plt.close()
-#     except Exception as e:
-#         return ("An error occurred while executing the graph code."+traceback.format_exc())
-#         # st.error("An error occurred while executing the graph code.")
-#         # st.text(traceback.format_exc())
+@tool(args_schema=ExecuteGraphToolArgs)
+def ExecuteGraph_Tool(code: str, filename: str) -> str:
+    """
+    Executes the Python code to  display the graph.
+    """
+    code = code.strip('```python')
+    namespace = {"plt": plt, "io": io}
+    try:
+        # Safely execute the code
+        exec(code, namespace)
+        # Capture the graph and display it
+        buffer = io.BytesIO()
+        plt.savefig(buffer, format="png")
+        buffer.seek(0)
+        print(f"Buffer type: {type(buffer)}")
+        file_path = f"/tmp/{filename}.png"
+        plt.savefig(file_path)
+        plt.close() 
+        return str({'link':file_path})
+    except Exception as e:
+        return ("An error occurred while executing the graph code."+traceback.format_exc())
+        # st.error("An error occurred while executing the graph code.")
+        # st.text(traceback.format_exc())
 
