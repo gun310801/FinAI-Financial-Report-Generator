@@ -1,4 +1,3 @@
-import json
 from pydantic import BaseModel, Field
 from langchain.tools import tool
 
@@ -21,29 +20,21 @@ def GrossmmarginpercTool(gross_margin_data: list, year_data: list, sales_data: l
     Returns:
     - A list of floats representing the YoY gross margin percentage for each year.
     """
-    # Ensure there is sufficient data for year-on-year calculation
 
     if len(gross_margin_data) != len(sales_data) or len(sales_data) != len(year_data):
         raise ValueError("All input lists must have the same length.")
-
-    # Ensure there is sufficient data for year-on-year calculation
     if len(year_data) < 2:
         raise ValueError("At least two years of data are required for YoY calculation.")
-
-    # Sort the data by year to ensure proper calculation
     data_sorted = sorted(zip(year_data, gross_margin_data, sales_data), key=lambda x: x[0])
-
-    # Extract sorted years, gross margins, and sales
     sorted_years, sorted_gross_margins, sorted_sales = zip(*data_sorted)
 
     yoy_gross_margin_percentage = []
 
     for i in range(len(sorted_years)):
-        if sorted_sales[i] is not None and sorted_sales[i] > 0:  # Avoid division by zero or invalid sales data
-            # Calculate Gross Margin percentage for the year
+        if sorted_sales[i] is not None and sorted_sales[i] > 0: 
             gross_margin_percentage = (sorted_gross_margins[i] / sorted_sales[i]) * 100
             yoy_gross_margin_percentage.append(gross_margin_percentage)
         else:
-            yoy_gross_margin_percentage.append(None)  # If data is missing or invalid
+            yoy_gross_margin_percentage.append(None) 
 
     return yoy_gross_margin_percentage

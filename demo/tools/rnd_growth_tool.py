@@ -19,16 +19,11 @@ def RNDGrowth_Tool(RNDgrowth_data: list, year_data: list) -> list[float]:
     Returns:
     - A list of floats representing the YoY growth percentage for each year compared to the previous year.
     """
-    # Ensure there is sufficient data for year-on-year calculation
     if len(RNDgrowth_data) < 2:
         return ["Not enough data to calculate year-on-year sales growth."]
     
     yoy_growth = []
-    
-    # Sort the sales data by year to ensure proper calculation
     growth_data_sorted = sorted(zip(year_data, RNDgrowth_data), key=lambda x: x[0])
-
-    # Extract sorted years and sales
     sorted_years, sorted_sales = zip(*growth_data_sorted)
 
     for i in range(1, len(sorted_years)):
@@ -39,10 +34,9 @@ def RNDGrowth_Tool(RNDgrowth_data: list, year_data: list) -> list[float]:
         previous_year_sales = sorted_sales[i - 1]
 
         if previous_year_sales is not None and current_year_sales is not None:
-            # Calculate YoY growth
             growth = ((current_year_sales - previous_year_sales) / previous_year_sales) * 100
             yoy_growth.append(growth)
         else:
-            yoy_growth.append(None)  # If data is missing
+            yoy_growth.append(None)
     
     return yoy_growth

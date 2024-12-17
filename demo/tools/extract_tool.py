@@ -2,9 +2,6 @@ import json
 from pydantic import BaseModel, Field
 from langchain.tools import tool
 from typing import Optional, List, Tuple
-
-# from utils.data_loader import load_json_data
-
 class Extract_toolArgs(BaseModel):
     a: str = Field(description="Company name")
     b: str = Field(description="item")
@@ -27,7 +24,6 @@ def Extract_Tool(a: str, b: str, c: str, d: str, e: str = None) -> Extract_toolA
     a = a.upper()
     b = b.lower()
 
-    # Filter data for the specific item and category (if provided)
     filtered_data = [
         item for item in data.get(a, [])
         if item["Item"].lower() == b and (not e or item.get("Category", "").lower() == e.lower())
@@ -41,7 +37,6 @@ def Extract_Tool(a: str, b: str, c: str, d: str, e: str = None) -> Extract_toolA
     year_data = []
     cash_data = []
 
-    # Ensure c and d represent years in the correct order
     if int(c) > int(d):
         c, d = d, c
 

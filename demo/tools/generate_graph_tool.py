@@ -1,7 +1,5 @@
 from pydantic import BaseModel, Field
 import traceback
-import matplotlib
-
 import matplotlib.pyplot as plt
 from langchain.tools import tool
 import io
