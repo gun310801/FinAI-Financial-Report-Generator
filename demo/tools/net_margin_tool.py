@@ -18,7 +18,7 @@ def NetMarginTool(net_income_data: list, year_data: list, sales_data: list) -> l
     - IT_data: List of corresponding net income.
     
     Returns:
-    - A list of floats representing the tax rate percentage for each year.
+    - A list of floats representing net margin percentage for each year.
     """
     # Ensure there is sufficient data for year-on-year calculation
 

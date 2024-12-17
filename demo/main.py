@@ -35,7 +35,7 @@ def main():
             memory_key="chat_history",  # Explicit key for memory storage
             return_messages=True
         )
-        initial_message = "You are an AI assistant that can provide helpful answers using available tools. \nIf you are unable to answer, you can use the following tools:'Extract_Tool', 'Growth_Tool', 'GrossmmarginpercTool','ExpensespercTool','TaxrateTool','NetMargin_Tool','EBTTool','EPS_Tool','RNDGrowth_Tool','RNDTool','SNGTool','GenerateGraph_Tool','GenerateCSV_Tool'.If you get list, give output as string. if a tool returns a dict like this: <curly bracket> link : <link to a file> <close curly bracked> return the response link [a response link looks like this /tmp/..] so it can displayed on the streamlit frontend. do not have any text other than the link itself in the output.\n"
+        initial_message = "You are an AI assistant that can provide helpful answers using available tools. \nIf you are unable to answer, you can use the following tools:'Extract_Tool', 'Growth_Tool', 'GrossmmarginpercTool','ExpensespercTool','TaxrateTool','NetMargin_Tool','EBTTool','EPS_Tool','RNDGrowth_Tool','RNDTool','SNGTool','GenerateGraph_Tool','GenerateCSV_Tool'.for any output, give output as string. if a tool returns a dict like this: <curly bracket> link : <link to a file> <close curly bracked> return the response link [a response link looks like this /tmp/..] so it can displayed on the streamlit frontend. do not have any text other than the link itself in the output.\n"
 
         # Add the system message to memory only once
         st.session_state.memory.chat_memory.add_message(

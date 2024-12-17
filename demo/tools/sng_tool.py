@@ -10,7 +10,7 @@ class SNGPercArgs(BaseModel):
 @tool(args_schema=SNGPercArgs)
 def SNGTool(SNG_data: list, year_data: list, sales_data: list) -> list[float]:
     """
-    Calculates selling and general percentage sales for  item:'operating expenses' category:'selling, general and administrative'
+    Calculates selling and general percentage sales growth yoy for  item:'operating expenses' category:'selling, general and administrative'
     This function receives year data and sales data list and  item:'operating expenses' category:'selling, general and administrative'.
 
     Arguments:

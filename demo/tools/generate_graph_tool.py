@@ -51,17 +51,19 @@ class ExecuteGraphToolArgs(BaseModel):
     code: str = Field(description="The Python code to execute and display the graph.")
     filename: str = Field(description="A relevant name for the vizualization file")
 
+class executedGraphToolArgs(BaseModel):
+    file_path: str = Field(description="A dictionary with key 'link' and value 'file_path' which is the url of the file")
+
+
 @tool(args_schema=ExecuteGraphToolArgs)
-def ExecuteGraph_Tool(code: str, filename: str) -> str:
+def ExecuteGraph_Tool(code: str, filename: str) -> executedGraphToolArgs:
     """
     Executes the Python code to  display the graph.
     """
     code = code.strip('```python')
     namespace = {"plt": plt, "io": io}
     try:
-        # Safely execute the code
         exec(code, namespace)
-        # Capture the graph and display it
         buffer = io.BytesIO()
         plt.savefig(buffer, format="png")
         buffer.seek(0)
@@ -72,6 +74,5 @@ def ExecuteGraph_Tool(code: str, filename: str) -> str:
         return str({'link':file_path})
     except Exception as e:
         return ("An error occurred while executing the graph code."+traceback.format_exc())
-        # st.error("An error occurred while executing the graph code.")
-        # st.text(traceback.format_exc())
+
 

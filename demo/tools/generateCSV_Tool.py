@@ -9,8 +9,11 @@ class GenerateCSVToolArgs(BaseModel):
     data: list = Field(description="List of data (list of dictionaries) to save as a CSV.")
     filename: str = Field(description="Desired filename for the CSV (without extension).")
 
+class executedGenerateCSVToolArgs(BaseModel):
+    file_path: str = Field(description="A dictionary with key 'link' and value 'file_path' which is the url of the file")
+
 @tool(args_schema=GenerateCSVToolArgs)
-def GenerateCSV_Tool(data: list, filename: str) -> dict:
+def GenerateCSV_Tool(data: list, filename: str) -> executedGenerateCSVToolArgs:
     """
     Generates a CSV file from the provided data and returns the path to download the file.
     """
@@ -25,6 +28,6 @@ def GenerateCSV_Tool(data: list, filename: str) -> dict:
         df.to_csv(file_path, index=False)
 
         # Return the path to download the file
-        return {'link': file_path}
+        return str({'link': file_path})
     except Exception as e:
         return f"Error generating CSV: {str(e)}"
